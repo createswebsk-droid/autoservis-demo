@@ -1,0 +1,150 @@
+* { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { min-height: 100vh; background: radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.22), transparent 30%), radial-gradient(circle at 85% 80%, rgba(14, 165, 233, 0.16), transparent 30%), linear-gradient(135deg, #0f172a, #1e1b4b 55%, #0f172a); color: white; font-family: Arial, sans-serif; overflow-x: hidden; } /* NAVIGÁCIA */ nav { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 8%; display: flex; justify-content: center; align-items: center; gap: 35px; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 1000; } nav a { position: relative; color: white; text-decoration: none; font-size: 16px; font-weight: 600; transition: 0.3s; } nav a:hover { color: #a5b4fc; } nav a::after { content: ""; position: absolute; left: 0; bottom: -7px; width: 0; height: 2px; background: #a5b4fc; border-radius: 10px; transition: 0.3s; } nav a:hover::after { width: 100%; } /* HLAVNÁ ČASŤ */ main { width: 90%; max-width: 1100px; margin: 0 auto; } .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 80px; } .label { color: #a5b4fc; font-size: 13px; font-weight: bold; letter-spacing: 4px; margin-bottom: 18px; } h1 { max-width: 900px; font-size: 68px; line-height: 1.05; letter-spacing: -2px; margin-bottom: 25px; animation: fadeUp 1s ease; text-shadow: 0 0 35px rgba(165, 180, 252, 0.2); } .description { max-width: 700px; color: #cbd5e1; font-size: 20px; line-height: 1.8; margin-bottom: 35px; } /* TLAČIDLO */ .button { display: inline-block; padding: 15px 30px; background: #6366f1; color: white; text-decoration: none; border-radius: 50px; font-size: 16px; font-weight: bold; box-shadow: 0 12px 35px rgba(99, 102, 241, 0.3); transition: 0.3s; } .button:hover { background: #4f46e5; transform: translateY(-4px) scale(1.02); box-shadow: 0 18px 40px rgba(99, 102, 241, 0.4); } /* SEKcie */ .section { padding: 120px 20px; text-align: center; } .section h2 { font-size: 44px; line-height: 1.15; margin-bottom: 20px; } .section > p:not(.label) { max-width: 700px; margin: 0 auto; color: #cbd5e1; font-size: 18px; line-height: 1.8; } /* O NÁS - OBRÁZOK */ .profile-image { width: 190px; height: 190px; object-fit: cover; border-radius: 50%; margin-bottom: 30px; border: 4px solid rgba(255, 255, 255, 0.16); box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35), 0 0 35px rgba(99, 102, 241, 0.12); animation: fadeUp 0.8s ease; } /* SLUŽBY */ .cards { margin-top: 55px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; } .service { padding: 38px 26px; background: rgba(31, 41, 55, 0.55); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 22px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18); transition: 0.3s; animation: fadeUp 0.8s ease both; } .service:nth-child(2) { animation-delay: 0.15s; } .service:nth-child(3) { animation-delay: 0.3s; } .service:hover { transform: translateY(-10px) scale(1.02); background: rgba(55, 65, 81, 0.72); border-color: rgba(165, 180, 252, 0.2); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28); } .service h3 { font-size: 22px; margin-bottom: 15px; } .service p { color: #cbd5e1; line-height: 1.7; } /* KONTAKT */ .contact { padding-bottom: 140px; } .contact .button { margin-top: 10px; } /* INSTAGRAM */ .social-button { display: inline-block; margin-top: 20px; padding: 12px 22px; color: white; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50px; background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); transition: 0.3s; } .social-button:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.15); } /* PÄTIČKA */ footer { padding: 30px 20px; text-align: center; color: #94a3b8; border-top: 1px solid rgba(255, 255, 255, 0.08); } /* ANIMÁCIE */ @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } } /* MOBIL */ @media (max-width: 700px) { nav { gap: 15px; padding: 18px 10px; } nav a { font-size: 13px; } h1 { font-size: 42px; letter-spacing: -1px; } .description { font-size: 17px; } .section { padding: 90px 15px; } .section h2 { font-size: 32px; } .cards { grid-template-columns: 1fr; gap: 18px; } .profile-image { width: 150px; height: 150px; } }
+.map {
+    margin-top: 40px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+.secondary-button {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.secondary-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+.address-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.address-link:hover {
+    color: #a5b4fc;
+}
+.demo-badge {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 7px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.gallery {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.price-note {
+    margin-top: 10px !important;
+    font-size: 14px !important;
+    color: #94a3b8 !important;
+}
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 8px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 250px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    background: #111827 !important;
+    color: white !important;
+    font-size: 16px;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}.contact-form .button {
+    cursor: pointer;
+    border: none;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 25px;
+    z-index: 1001;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: #a5b4fc;
+}
